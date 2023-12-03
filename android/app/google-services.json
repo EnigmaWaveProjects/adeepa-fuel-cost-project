@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "441025168009",
+    "project_id": "fuelcost-395318",
+    "storage_bucket": "fuelcost-395318.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441025168009:android:5162f2e257b0830888fc58",
+        "android_client_info": {
+          "package_name": "com.example.fuelcost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441025168009-j5addi7dmqv3o9booe48vr0enskfu36u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACivDLdr0yCyegpALWs9yDM5bq_oWGPDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441025168009-j5addi7dmqv3o9booe48vr0enskfu36u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
