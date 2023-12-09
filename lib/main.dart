@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         '/signup': (context) => SignupPage(),
         '/home': (context) => const HomePage(),
         '/profile': (context) =>
-            ProfilePage(), // Use '/signin' as the route name for SignInPage
+            const ProfilePage(), // Use '/signin' as the route name for SignInPage
       },
       // Use '/signin' as the route name for SignInPage
     );
