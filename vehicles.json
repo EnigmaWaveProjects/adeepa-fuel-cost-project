@@ -1,0 +1,68 @@
+[
+    {
+      "name": "Car",
+      "vehicles": [
+        {"model": "Toyota Corolla", "fuelEfficiency": 14},
+        {"model": "Nissan Sunny", "fuelEfficiency": 14},
+        {"model": "Toyota Premio", "fuelEfficiency": 15},
+        {"model": "Honda Civic", "fuelEfficiency": 10},
+        {"model": "BMW 318i", "fuelEfficiency": 12},
+        {"model": "Bajaj Pulsar", "fuelEfficiency": 45},
+        {"model": "TVS Metro", "fuelEfficiency": 65},
+        {"model": "Bajaj CT100", "fuelEfficiency": 75},
+        {"model": "Honda CD200", "fuelEfficiency": 30},
+        {"model": "Honda CD125", "fuelEfficiency": 40},
+        {"model": "Isuzu Canter", "fuelEfficiency": 6},
+        {"model": "Leyland Lorry 9", "fuelEfficiency": 5},
+        {"model": "Leyland Bus", "fuelEfficiency": 5},
+        {"model": "Nissan Caravan", "fuelEfficiency": 11},
+        {"model": "Toyota Hiace", "fuelEfficiency": 10},
+        {"model": "Toyota Prado", "fuelEfficiency": 8},
+        {"model": "Nissan Patrol", "fuelEfficiency": 7},
+        {"model": "Mitsubishi Montero", "fuelEfficiency": 8}
+      ]
+    },
+    {
+      "name": "Bike",
+      "vehicles": [
+        {"model": "Bajaj Pulsar", "fuelEfficiency": 45},
+        {"model": "TVS Metro", "fuelEfficiency": 65}
+      ]
+    },
+    {
+      "name": "Heavy",
+      "vehicles": [
+        {"model": "Isuzu Canter", "fuelEfficiency": 6},
+        {"model": "Leyland Lorry 9", "fuelEfficiency": 5}
+      ]
+    },
+    {
+      "name": "Van",
+      "vehicles": [
+        {"model": "Toyota Hiace", "fuelEfficiency": 10}
+      ]
+    },
+    {
+      "name": "Truck",
+      "vehicles": [
+        {"model": "Ford F-150", "fuelEfficiency": 18},
+        {"model": "Chevrolet Silverado", "fuelEfficiency": 17}
+      ]
+    },
+    {
+      "name": "Motorcycle",
+      "vehicles": [
+        {"model": "Harley-Davidson Sportster", "fuelEfficiency": 45},
+        {"model": "Honda CBR500R", "fuelEfficiency": 50}
+      ]
+    },
+    {
+      "name": "Suv",
+      "vehicles": [
+        {"model": "Toyota Prado", "fuelEfficiency": 8},
+        {"model": "Nissan Patrol", "fuelEfficiency": 7},
+        {"model": "Mitsubishi Montero", "fuelEfficiency": 8}
+      ]
+    }
+  ]
+  

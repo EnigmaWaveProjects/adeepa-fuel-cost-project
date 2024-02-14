@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fuelcost/pages/total_cost_page.dart';
 
@@ -75,8 +76,8 @@ class ResultPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('assets/fuel.jpeg'), // Add your image here
-              const SizedBox(height: 20),
+              // const ProgressChart(),
+              const Spacer(),
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -145,10 +146,62 @@ class ResultPage extends StatelessWidget {
                   ),
                 ),
               ),
+              const Spacer(),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class ProgressChart extends StatelessWidget {
+  const ProgressChart({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      children: [
+        ProgressBar(),
+        ProgressBar(),
+        ProgressBar(),
+        ProgressBar(),
+      ],
+    );
+  }
+}
+
+class ProgressBar extends StatelessWidget {
+  const ProgressBar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Divider(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              "Fuel Cost",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 1.5,
+              child: CupertinoSlider(
+                min: 0,
+                max: 100,
+                value: 40,
+                onChanged: (value) {},
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

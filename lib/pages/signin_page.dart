@@ -1,12 +1,28 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
-  SignInPage({Key? key}) : super(key: key);
+class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+
+  late TextEditingController _emailController;
+
+  late TextEditingController _passwordController;
+
+  @override
+  initState() {
+    _emailController = TextEditingController();
+    _emailController.text = "contact.vehanhemsara@gmail.com";
+    _passwordController = TextEditingController();
+    _passwordController.text = "aaabbbccc";
+    super.initState();
+  }
 
   Future<void> _signIn(BuildContext context) async {
     final String email = _emailController.text.trim();
