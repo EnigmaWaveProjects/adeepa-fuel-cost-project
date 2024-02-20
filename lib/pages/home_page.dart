@@ -40,6 +40,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       vehicleFetching = false;
       vehicleCategories = data;
+      selectedCategory = data.first;
     });
   }
 
@@ -75,20 +76,6 @@ class _HomePageState extends State<HomePage> {
   VehicleCategory? selectedCategory;
 
   late List<VehicleCategory> vehicleCategories = [];
-  // Map<String, Map<String, double>> fuelCostData = {
-  //   'Petrol': {
-  //     '92': 350.0,
-  //     '95': 370.0,
-  //     'Superdiesel': 360.0,
-  //     'Normal Diesel': 310.0
-  //   },
-  //   'Diesel': {
-  //     '92': 350.0,
-  //     '95': 370.0,
-  //     'Superdiesel': 360.0,
-  //     'Normal Diesel': 310.0
-  //   },
-  // };
 
   String selectedVehicleModel = 'Toyota Corolla'; // Default vehicle model
   Vehicle? selectedVehicle; // Default vehicle model

@@ -254,49 +254,62 @@ class _TotalCostPageState extends State<TotalCostPage> {
             const SizedBox(height: 20),
 
             Center(
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ChartScreen(
-                          totalFuelCost: widget.totalCost,
-                          tireCost:
-                              double.tryParse(tireCostController.text) ?? 0,
-                          serviceCost:
-                              double.tryParse(serviceCostController.text) ?? 0,
-                          insCost:
-                              double.tryParse(insuranceCostController.text) ??
+              child: Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ChartScreen(
+                              totalFuelCost: widget.totalCost,
+                              tireCost:
+                                  double.tryParse(tireCostController.text) ?? 0,
+                              serviceCost:
+                                  double.tryParse(serviceCostController.text) ??
+                                      0,
+                              insCost: double.tryParse(
+                                      insuranceCostController.text) ??
                                   0,
-                          foodCost:
-                              double.tryParse(foodExpenseController.text) ?? 0,
-                          roomCost: double.tryParse(
-                                  accommodationExpenseController.text) ??
-                              0,
-                          otherCost:
-                              double.tryParse(otherExpenseController.text) ?? 0,
+                              foodCost:
+                                  double.tryParse(foodExpenseController.text) ??
+                                      0,
+                              roomCost: double.tryParse(
+                                      accommodationExpenseController.text) ??
+                                  0,
+                              otherCost: double.tryParse(
+                                      otherExpenseController.text) ??
+                                  0,
+                            ),
+                          ));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.green, // Background color
+                        borderRadius:
+                            BorderRadius.circular(10), // Rounded corners
+                      ),
+                      // Background color
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          'Total Cost : ${TotalCost.toStringAsFixed(2)} LKR',
+                          style: const TextStyle(
+                            fontFamily: 'DM Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
-                      ));
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.green, // Background color
-                    borderRadius: BorderRadius.circular(10), // Rounded corners
-                  ),
-                  // Background color
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text(
-                      'Total Cost : ${TotalCost.toStringAsFixed(2)} LKR',
-                      style: const TextStyle(
-                        fontFamily: 'DM Sans',
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
                       ),
                     ),
                   ),
-                ),
+                  SizedBox(height: 10),
+                  Text(
+                    "*Tap On the cost to view chart".toUpperCase(),
+                    style: TextStyle(color: Colors.grey),
+                  )
+                ],
               ),
             ),
             const SizedBox(
