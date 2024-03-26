@@ -384,7 +384,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: vehicleFetching
-            ? CupertinoActivityIndicator()
+            ? const CupertinoActivityIndicator()
             : Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: SingleChildScrollView(
@@ -629,20 +629,18 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                       builder: (context) => LocationPickerView(
                                         onSelect: (location) {
-                                          if (location != null) {
-                                            setState(() {
-                                              _fromLocation = location.latLng;
-                                            });
-                                            UniqueKey key = UniqueKey();
-                                            setState(() {
-                                              _markers.add(
-                                                Marker(
-                                                    markerId: MarkerId(
-                                                        key.toString()),
-                                                    position: location.latLng),
-                                              );
-                                            });
-                                          }
+                                          setState(() {
+                                            _fromLocation = location.latLng;
+                                          });
+                                          UniqueKey key = UniqueKey();
+                                          setState(() {
+                                            _markers.add(
+                                              Marker(
+                                                  markerId:
+                                                      MarkerId(key.toString()),
+                                                  position: location.latLng),
+                                            );
+                                          });
                                         },
                                       ),
                                     ));
@@ -677,20 +675,18 @@ class _HomePageState extends State<HomePage> {
                                   MaterialPageRoute(
                                     builder: (context) => LocationPickerView(
                                       onSelect: (location) {
-                                        if (location != null) {
-                                          setState(() {
-                                            _toLocation = location.latLng;
-                                          });
-                                          UniqueKey key = UniqueKey();
-                                          setState(() {
-                                            _markers.add(
-                                              Marker(
-                                                  markerId:
-                                                      MarkerId(key.toString()),
-                                                  position: location.latLng),
-                                            );
-                                          });
-                                        }
+                                        setState(() {
+                                          _toLocation = location.latLng;
+                                        });
+                                        UniqueKey key = UniqueKey();
+                                        setState(() {
+                                          _markers.add(
+                                            Marker(
+                                                markerId:
+                                                    MarkerId(key.toString()),
+                                                position: location.latLng),
+                                          );
+                                        });
                                       },
                                     ),
                                   ));

@@ -11,7 +11,7 @@ class MapWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    LatLng colomboLatLng = LatLng(6.9271, 79.8612);
+    LatLng colomboLatLng = const LatLng(6.9271, 79.8612);
 
     return SizedBox(
       child: Container(
@@ -20,8 +20,8 @@ class MapWidget extends StatelessWidget {
           apiKey: dotenv.get('GOOGLE_API_KEY'),
           onPlacePicked: (result) {
             onSelect(SelectedLocation(
-                latLng: LatLng(result!.geometry!.location.lat,
-                    result!.geometry!.location.lng),
+                latLng: LatLng(result.geometry!.location.lat,
+                    result.geometry!.location.lng),
                 address: result.formattedAddress!));
             Navigator.of(context).pop();
           },

@@ -111,7 +111,7 @@ class _TotalCostPageState extends State<TotalCostPage> {
         },
       )
     ];
-    int index = 0;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Additional Expenses'),
@@ -304,10 +304,10 @@ class _TotalCostPageState extends State<TotalCostPage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     "*Tap On the cost to view chart".toUpperCase(),
-                    style: TextStyle(color: Colors.grey),
+                    style: const TextStyle(color: Colors.grey),
                   )
                 ],
               ),
